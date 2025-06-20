@@ -30,6 +30,11 @@
         <script>
             const { createApp, ref } = Vue;
             createApp({
+                data(){
+                    return {
+                        image: null;
+                    }
+                }
                 methods: {
                     async getDogImage(){
                         const res = await fetch("https://dog.ceo/dog-api/documentation/random");

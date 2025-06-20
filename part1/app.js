@@ -43,6 +43,7 @@ let db;
        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
        ('alex246', 'alex@example.com', 'hashed246', 'walker'),
        ('johndoe', 'johndoe@example.com', 'hashed369', 'owner');
+      `);
       await db.execute(`
        INSERT INTO Dogs (user_id, name, size)
        VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
@@ -50,7 +51,7 @@ let db;
        ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large'),
        ((SELECT user_id FROM Users WHERE username='Joe345'), 'Kevin', 'small'),
        ((SELECT user_id FROM Users WHERE username='Steven'), 'Jason', 'medium');
-             `);
+      `);
       await db.execute(`
        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
        VALUES ((SELECT dog_id FROM Dog WHERE name='Max'), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),

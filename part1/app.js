@@ -43,6 +43,15 @@ let db;
       database: 'DogWalkService'
     });
 
+    // Create a tables if it doesn't exist
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS User (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255),
+        author VARCHAR(255)
+      )
+    `);
+
     // Insert data if table is empty
     const [users] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (users[0].count === 0) {

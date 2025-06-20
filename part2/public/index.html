@@ -42,7 +42,9 @@
             body: JSON.stringify({ username: this.username, password: this.password})
           })
         const value = await res.json();
-        if(value.role)
+        if(value.role == 'owner'){
+
+        }
         }
       }
     }).mount('#app');

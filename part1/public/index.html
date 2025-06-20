@@ -58,6 +58,9 @@
                         const data = await res.json();
                         this.image = data.message;
                     }
+                },
+                mounted(){
+                    this.getDogImage();
                 }
             }).mount('#app');
         </script>

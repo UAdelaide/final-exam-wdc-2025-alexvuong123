@@ -5,7 +5,9 @@ var db = require('../db'); // database
 let db;
 
 (async () => {
-    try
+    try{
+        
+    }
 })
 
 // /api/dogs

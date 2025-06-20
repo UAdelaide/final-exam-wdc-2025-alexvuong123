@@ -22,8 +22,8 @@ let db;
             `);
         // insert sample for open walk requests
          await db.execute(`
-            INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, owner_id)
-
+            INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location)
+s
             `)
     } catch (err){
         console.error('Error', err);

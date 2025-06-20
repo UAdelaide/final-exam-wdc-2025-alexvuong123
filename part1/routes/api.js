@@ -23,7 +23,7 @@ let db;
         // insert sample for open walk requests
          await db.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location)
-s
+            VALUES ((SELECT ))
             `)
     } catch (err){
         console.error('Error', err);

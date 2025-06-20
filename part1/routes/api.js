@@ -10,6 +10,7 @@ let db;
         // insert users
         await db.execute(`
             INSERT INTO Users (username, email, password_hash, role)
+            VALUES('')
             `)
 
         // insert sample for dogs

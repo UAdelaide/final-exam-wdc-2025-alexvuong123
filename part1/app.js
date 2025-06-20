@@ -39,9 +39,7 @@ let db;
       await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
        VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-       ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-       ('newalker', 'newalker@example.com', 'hashed246', 'walker'),
-       ('johndoe', 'johndoe@example.com', 'hashed369', 'owner');
+
       `);
              await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
@@ -55,13 +53,13 @@ let db;
 
                await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
-       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+         ('johndoe', 'johndoe@example.com', 'hashed369', 'owner')
         `);
 
 
        await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
-       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         `);
 
       await db.execute(`

@@ -36,7 +36,6 @@ let db;
     // Insert data if table is empty
     const [users] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (users[0].count === 0) {
-      console.log("inserting");
       await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
        VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),

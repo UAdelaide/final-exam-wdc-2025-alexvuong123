@@ -91,7 +91,7 @@ app.get('/api/dogs', async (req, res) => {
 // /api/walkrequests/open
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [rows] = await db.execute(`SELECT WalkRequests.requests_id, Dog.name AS dog_name, WalkRequests.request_time, WalkRequests.duration_minutes, Walk
+    const [rows] = await db.execute(`SELECT WalkRequests.requests_id, Dog.name AS dog_name, WalkRequests.request_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner
       `);
     res.json(rows);
   } catch (err) {

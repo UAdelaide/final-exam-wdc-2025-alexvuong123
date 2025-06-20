@@ -15,12 +15,12 @@
 
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a> -->
-    <form @submit.prevent="login form">
-      <div class="tologin">
+    <form @submit.prevent="login-form">
+      <div class="toLogin">
         <label for="username">Username</label>
         <input v-model="username" type="text">
       </div>
-      <div>
+      <div class="toLogin">
         <label for="password">Password</label>
         <input v-model="password" type="password">
       </div>

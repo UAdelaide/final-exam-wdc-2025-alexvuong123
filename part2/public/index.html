@@ -18,11 +18,11 @@
     <form id="login_form">
       <div class="toLogin">
         <label for="username">Username</label>
-        <input v-model="username" type="text">
+        <input v-model="username" type="text" id="username">
       </div>
       <div class="toLogin">
         <label for="password">Password</label>
-        <input v-model="password" type="password">
+        <input v-model="password" type="password" id="password">
       </div>
       <button type="submit" @click="login_form">Log in</button>
     </form>

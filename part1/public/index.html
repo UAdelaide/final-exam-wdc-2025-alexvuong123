@@ -15,14 +15,14 @@
     <body>
         <div id="app">
             <h1>click here! ! ! @ ! </h1>
-            <button type="button" @click="dogImage"></button>
+            <button type="button" @click="getDogImage"></button>
         </div>
         <script>
             const { createApp, ref } = Vue;
             createApp({
                 methods: {
-                    dogImage(){
-                        res = fetch("https://dog.ceo/dog-api/documentation/random");
+                    getDogImage(){
+                        const res = await fetch("https://dog.ceo/dog-api/documentation/random");
 
                     }
                 }

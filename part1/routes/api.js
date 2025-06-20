@@ -14,7 +14,7 @@ let db;
             `);
         // insert sample for open walk requests
          await db.execute(`
-            INSERT INTO walkRequests
+            INSERT INTO WalkRequests
 
             `)
     } catch (err){

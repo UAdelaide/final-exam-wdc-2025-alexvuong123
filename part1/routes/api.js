@@ -11,7 +11,7 @@ var db = require('../db'); // database
             INSERT INTO Users (username, email, password_hash, role)
             VALUES('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner')
-            `)
+            `);
 
         // insert sample for dogs
         await db.execute(`
@@ -29,7 +29,7 @@ var db = require('../db'); // database
         // insert sample for walkers summary
         await db.execute(`
             INSERT INTO WalkRatings
-            `)
+            `);
     } catch (err){
         console.error('Error', err);
     }

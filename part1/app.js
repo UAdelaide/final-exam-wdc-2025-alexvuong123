@@ -53,6 +53,7 @@ let db;
        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
        ('alex246', 'alex@example.com', 'hashed246', 'walker'),
        ('johndoe', 'johndoe@example.com', 'hashed369', 'owner')
+       
       `);
     }
   } catch (err) {

@@ -11,7 +11,8 @@ var db = require('../db'); // database
             INSERT INTO Users (username, email, password_hash, role)
             VALUES('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-            ('bobwalker', ')
+            ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+            (')
             `);
 
         // insert sample for dogs

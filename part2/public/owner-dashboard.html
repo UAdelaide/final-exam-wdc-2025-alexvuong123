@@ -83,10 +83,9 @@
 
         async function log_out(){
           const res = await fetch('/api/users/logout', {
-              method: 'POST',
+              method: 'POST'
+            })
               window.location.href = 'index.html';
-          }
-          )
         }
 
         async function loadWalks() {

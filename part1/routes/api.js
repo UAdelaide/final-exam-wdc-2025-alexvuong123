@@ -25,13 +25,13 @@ var db = require('../db'); // database
         // insert sample for open walk requests
         await db.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-            VALUES ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10T08:00:00.000Z', 30, 'Parklands', 'open');
+            VALUES ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10T08:00:00.000Z', 30, 'Parklands', 'open')
             `);
 
         // insert sample for walkers summary
         await db.execute(`
             INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating)
-            VALUES (1, 2, )
+            VALUES (1, 2, (SELECT user_id FROM Users WHERE username='alice123'), )
             `);
     } catch (err){
         console.error('Error', err);

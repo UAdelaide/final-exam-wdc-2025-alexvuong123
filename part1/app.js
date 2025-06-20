@@ -52,17 +52,17 @@ let db;
 
       await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small')
+       VALUES ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small')
        `);
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-      ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large')
+      VALUES ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large')
        `);
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-      ((SELECT user_id FROM Users WHERE username='newalker'), 'Kevin', 'small')
+      VALUES ((SELECT user_id FROM Users WHERE username='newalker'), 'Kevin', 'small')
        `);
 
             await db.execute(`

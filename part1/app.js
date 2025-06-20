@@ -73,10 +73,7 @@ let db;
 
       await db.execute(`
        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-       VALUES ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
-       ((SELECT dog_id FROM Dogs WHERE name='Bob'), '2025-06-10 10:15:00', '15', 'North Terrace', 'cancelled'),
-       ((SELECT dog_id FROM Dogs WHERE name='Kevin'), '2025-06-10 10:30:00', '30', 'King William St', 'completed'),
-       ((SELECT dog_id FROM Dogs WHERE name='Jason'), '2025-06-10 11:00:00', '20', 'Grenfell St', 'open');
+       VALUES ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', '30', 'Parklands', 'open')
       `);
             await db.execute(`
        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)

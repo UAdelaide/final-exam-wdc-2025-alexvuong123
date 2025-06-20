@@ -39,29 +39,12 @@ let db;
       await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)
        VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-
+       ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+       ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+       ('newalker', 'newalker@example.com', 'hashed246', 'walker'),
+       ('johndoe', 'johndoe@example.com', 'hashed369', 'owner');
       `);
-             await db.execute(`
-       INSERT INTO Users (username, email, password_hash, role)
-    ('bobwalker', 'bob@example.com', 'hashed456', 'walker')
-        `);
-
-               await db.execute(`
-       INSERT INTO Users (username, email, password_hash, role)
-       ('newalker', 'newalker@example.com', 'hashed246', 'walker')
-        `);
-
-               await db.execute(`
-       INSERT INTO Users (username, email, password_hash, role)
-         ('johndoe', 'johndoe@example.com', 'hashed369', 'owner')
-        `);
-
-
-       await db.execute(`
-       INSERT INTO Users (username, email, password_hash, role)
-         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-        `);
-
+   
       await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
        VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),

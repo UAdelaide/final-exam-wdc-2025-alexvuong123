@@ -47,7 +47,7 @@ let db;
 
       await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
+       VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium')
       `);
 
       await db.execute(`
@@ -92,7 +92,7 @@ let db;
             await db.execute(`
        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
        VALUES
-       ((SELECT dog_id FROM Dogs WHERE name='Jason'), '2025-06-10 11:00:00',20, 'Grenfell St', 'open');
+       ((SELECT dog_id FROM Dogs WHERE name='Jason'), '2025-06-10 11:00:00',20, 'Grenfell St', 'open')
       `);
     }
   } catch (err) {

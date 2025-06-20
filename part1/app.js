@@ -44,6 +44,21 @@ let db;
        ('newalker', 'newalker@example.com', 'hashed246', 'walker'),
        ('johndoe', 'johndoe@example.com', 'hashed369', 'owner');
       `);
+             await db.execute(`
+       INSERT INTO Users (username, email, password_hash, role)
+       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        `);
+
+               await db.execute(`
+       INSERT INTO Users (username, email, password_hash, role)
+       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        `);
+
+               await db.execute(`
+       INSERT INTO Users (username, email, password_hash, role)
+       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        `);
+
 
        await db.execute(`
        INSERT INTO Users (username, email, password_hash, role)

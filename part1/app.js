@@ -48,10 +48,6 @@ let db;
       await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
        VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
-       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
-       ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large'),
-       ((SELECT user_id FROM Users WHERE username='newalker'), 'Kevin', 'small'),
-       ((SELECT user_id FROM Users WHERE username='bobwalker'), 'Jason', 'medium');
       `);
 
       await db.execute(`
@@ -61,17 +57,17 @@ let db;
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+      ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large')
        `);
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+      ((SELECT user_id FROM Users WHERE username='newalker'), 'Kevin', 'small')
        `);
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+       ((SELECT user_id FROM Users WHERE username='bobwalker'), 'Jason', 'medium')
        `);
 
 

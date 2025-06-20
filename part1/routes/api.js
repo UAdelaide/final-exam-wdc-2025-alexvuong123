@@ -3,7 +3,6 @@ var router = express.Router();
 var db = require('../db'); // database
 
 // insert data
-let db;
 
 (async () => {
     try{
@@ -29,7 +28,7 @@ let db;
 
         // insert sample for walkers summary
         await db.execute(`
-            INSERT INTO WalkRatings 
+            INSERT INTO WalkRatings
             `)
     } catch (err){
         console.error('Error', err);

@@ -5,7 +5,8 @@ var db = require('../db'); // database
 // /api/dogs
 router.get('/dogs', async(req, res) => {
     try{
-        const [rows] = await db.execute()
+        const [rows] = await db.execute(`
+            SELECT `)
     }
 })
 

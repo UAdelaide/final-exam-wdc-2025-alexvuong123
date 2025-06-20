@@ -8,7 +8,9 @@ let db;
 (async () => {
     try{
         // insert users
-        await db.execute(``)
+        await db.execute(`
+            INSERT INTO Users (username, email, password_hash, role)
+            `)
 
         // insert sample for dogs
          await db.execute(`

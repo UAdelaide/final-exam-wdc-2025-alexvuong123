@@ -65,11 +65,8 @@ let db;
        VALUES ((SELECT dog_id FROM Dog WHERE name='Max'), '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
        ((SELECT dog_id FROM Dog WHERE name='Bella'), '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted'),
        ((SELECT dog_id FROM Dog WHERE name='Bob'), '2025-06-10 10:15:00', '15', 'North Terrace', 'cancelled'),
-
-((SELECT dog_id FROM Dog WHERE name='Kevin'), '2025-06-10 10:30:00', '30', 'King William St', 'completed'),
-
-((SELECT dog_id FROM Dog WHERE name='Jason'), '2025-06-10 11:00:00', '20', 'Grenfell St', 'open');
-
+       ((SELECT dog_id FROM Dog WHERE name='Kevin'), '2025-06-10 10:30:00', '30', 'King William St', 'completed'),
+       ((SELECT dog_id FROM Dog WHERE name='Jason'), '2025-06-10 11:00:00', '20', 'Grenfell St', 'open');
       `);
     }
   } catch (err) {

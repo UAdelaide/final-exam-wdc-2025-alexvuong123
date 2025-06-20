@@ -12,7 +12,7 @@ var db = require('../db'); // database
             VALUES('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-            (')
+            ('newwalker', 'newwalker@example.com, 'hashed000', 'walker')
             `);
 
         // insert sample for dogs

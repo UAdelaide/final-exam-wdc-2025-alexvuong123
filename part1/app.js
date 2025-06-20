@@ -88,8 +88,8 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-// /api/walk
-app.get('/api/dogs', async (req, res) => {
+// /api/walkrequests/open
+app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await db.execute(`SELECT Dogs.name AS dog_name, Dogs.size, Users.username
       AS owner_username

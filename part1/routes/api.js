@@ -29,7 +29,7 @@ let db;
 
         // insert sample for walkers summary
         await db.execute(`
-            INSERT INTO WalkRatings
+            INSERT INTO WalkRatings 
             `)
     } catch (err){
         console.error('Error', err);

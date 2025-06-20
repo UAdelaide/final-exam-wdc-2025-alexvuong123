@@ -4,7 +4,9 @@ var db = require('../db'); // database
 
 let db;
 
-()
+(async () => {
+    try
+})
 
 // /api/dogs
 router.get('/dogs', async(req, res) => {

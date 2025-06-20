@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db'); // database
 
+// insert data
 let db;
 
 (async () => {
@@ -14,7 +15,7 @@ let db;
             `);
         // insert sample for open walk requests
          await db.execute(`
-            INSERT INTO WalkRequests ()
+            INSERT INTO WalkRequests (dog_id, )
 
             `)
     } catch (err){

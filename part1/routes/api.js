@@ -6,7 +6,7 @@ var db = require('../db'); // database
 router.get('/dogs', async(req, res) => {
     try{
         const [rows] = await db.execute(`
-            SELECT d.name AS`)
+            INSERT INTO dogs (name, size, owner_id)`)
     }
 })
 

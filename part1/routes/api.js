@@ -11,6 +11,8 @@ let db;
             VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username='alice123')),
             ('Bella', 'small', (SELECT user_id FROM Users WHERE username='carol123'))
             `);
+    } catch (err){
+        console.error('Error', err);
     }
 });
 
@@ -18,9 +20,6 @@ let db;
 router.get('/dogs', async(req, res) => {
     try{
 
-    } catch (err) {
-        console.error('Error', err);
-    }
 });
 
 // /api/walkrequests/open

@@ -24,7 +24,7 @@
             <h1>click here! ! ! @ ! </h1>
             <button type="button" @click="getDogImage">click</button>
             <div v-if="image">
-                <img src="image" alt="">
+                <img :src="image" alt="">
             </div>
         </div>
         <script>
@@ -32,9 +32,9 @@
             createApp({
                 data(){
                     return {
-                        image: null;
-                    }
-                }
+                        image: null
+                    };
+                },
                 methods: {
                     async getDogImage(){
                         const res = await fetch("https://dog.ceo/dog-api/documentation/random");

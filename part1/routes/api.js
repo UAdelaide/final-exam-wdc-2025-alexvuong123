@@ -3,6 +3,7 @@ var router = express.Router();
 var db = require('../db'); // database
 
 // insert data
+let db;
 
 (async () => {
     try{

@@ -49,8 +49,8 @@ let db;
        VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
        ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
        ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large'),
-       ((SELECT user_id FROM Users WHERE username='Joe345'), 'Kevin', 'small'),
-       ((SELECT user_id FROM Users WHERE username='Steven'), 'Jason', 'medium');
+       ((SELECT user_id FROM Users WHERE username='alex246'), 'Kevin', 'small'),
+       ((SELECT user_id FROM Users WHERE username='bobwalker'), 'Jason', 'medium');
       `);
       await db.execute(`
        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)

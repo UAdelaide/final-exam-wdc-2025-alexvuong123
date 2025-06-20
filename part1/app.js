@@ -84,21 +84,18 @@ app.get('/api/dogs', async (req, res) => {
       `);
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+    res.status(500).json({ error: 'Failed to fetch' });
   }
 });
 
 // /api/walkrequests/open
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [rows] = await db.execute(`SELECT WalkRequests.requests_id, Dog.name AS dog_name, Dogs.size, Users.username
-      AS owner_username
-      FROM Dogs
-      JOIN Users ON Dogs.owner_id = Users.user_id
+    const [rows] = await db.execute(`SELECT WalkRequests.requests_id, Dog.name AS dog_name, WalkRequests.
       `);
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+    res.status(500).json({ error: 'Failed to fetch' });
   }
 });
 

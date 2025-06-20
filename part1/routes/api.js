@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db'); // database
 
+let db;
+
+()
+
 // /api/dogs
 router.get('/dogs', async(req, res) => {
     try{
@@ -17,7 +21,7 @@ router.get('/dogs', async(req, res) => {
 
 // /api/walkrequests/open
 router.get('/walkrequest/open', async(req, res) => {
-    
+
 });
 
 // /api/walkers/summary

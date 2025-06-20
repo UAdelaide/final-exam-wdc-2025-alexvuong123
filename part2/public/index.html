@@ -47,7 +47,7 @@
           })
         const value = await res.json();
         console.log('response: ', value);
-        if(value.role == 'owner'){
+        if(value.user.role == 'owner'){
           window.location.href = 'owner-dashboard.html';
         } else if (value.role == 'walker'){
           window.location.href = 'walker-dashboard.html';

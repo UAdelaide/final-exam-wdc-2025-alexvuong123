@@ -6,6 +6,7 @@ let db;
 
 (async () => {
     try{
+        // insert 
          await db.execute(`
             INSERT INTO dogs (name, size, owner_id)
             VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username='alice123')),
@@ -18,7 +19,6 @@ let db;
 
 // /api/dogs
 router.get('/dogs', async(req, res) => {
-    try{
 
 });
 

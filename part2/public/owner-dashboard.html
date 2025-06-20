@@ -83,9 +83,9 @@
 
         async function log_out(){
           const res = await fetch('/api/users/logout', {
-
+              method: 'POST',
+              window.location.href
           }
-            method: 'POST'
           )
         }
 

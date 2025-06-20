@@ -7,6 +7,9 @@ let db;
 
 (async () => {
     try{
+        // insert users
+        await db.execute(``)
+
         // insert sample for dogs
          await db.execute(`
             INSERT INTO Dogs (name, size, owner_id)

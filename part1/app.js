@@ -52,8 +52,15 @@ let db;
        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
        ('alex246', 'alex@example.com', 'hashed246', 'walker'),
-       ('johndoe', 'johndoe@example.com', 'hashed369', 'owner')
-       
+       ('johndoe', 'johndoe@example.com', 'hashed369', 'owner');
+
+       INSERT INTO Dogs (user_id, name, size)
+       VALUES ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
+       ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+       ((SELECT user_id FROM Users WHERE username='johndoe'), 'Bob', 'large'),
+       ((SELECT user_id FROM Users WHERE username='Joe345'), 'Kevin', 'small'),
+       ((SELECT user_id FROM Users WHERE username='Steven'), 'Jason', 'medium');
+
       `);
     }
   } catch (err) {

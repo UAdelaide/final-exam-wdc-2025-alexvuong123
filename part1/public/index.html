@@ -24,8 +24,7 @@
                     getDogImage(){
                         const res = fetch("https://dog.ceo/dog-api/documentation/random");
                         const data = res.json();
-                        
-
+                        this.dogImage = data.message;
                     }
                 }
             }).mount('#app');

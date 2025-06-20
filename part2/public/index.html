@@ -48,7 +48,7 @@
         const value = await res.json();
         if(value.role == 'owner'){
           window.location.href = 'owner-dashboard.html';
-        } else {
+        } else if (value.role == 'walker'){
           window.location.href = 'walker-dashboard.html';
         }
         }

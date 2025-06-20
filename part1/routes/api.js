@@ -20,11 +20,15 @@ let db;
             VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username='alice123')),
             ('Bella', 'small', (SELECT user_id FROM Users WHERE username='carol123'))
             `);
+
         // insert sample for open walk requests
          await db.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, owner_id)
             VALUES ((SELECT dog_id FROM Dog WHERE name='Max'), '2025-06-10T08:00:00.000Z', '30', 'Parklands', (SELECT user_id FROM Users WHERE username='alice123')),
-            `)
+            `);
+
+        // insert sample for walkers summary
+        await
     } catch (err){
         console.error('Error', err);
     }

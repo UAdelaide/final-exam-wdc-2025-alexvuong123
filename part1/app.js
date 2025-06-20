@@ -67,7 +67,7 @@ let db;
 
             await db.execute(`
        INSERT INTO Dogs (owner_id, name, size)
-       ((SELECT user_id FROM Users WHERE username='bobwalker'), 'Jason', 'medium')
+       VALUES ((SELECT user_id FROM Users WHERE username='bobwalker'), 'Jason', 'medium')
        `);
 
 

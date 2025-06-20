@@ -99,8 +99,8 @@ app.get('/api/walkers/summary', async (req, res) => {
     const [rows] = await db.execute(`SELECT Users.username AS walker_username, COUNT(WalkRatings.rating_id) AS total_ratings, AVG(WalkRatings.rating) AS average_rating
       (SELECT COUNT(*) FROM WalkRequests JOIN WalkApplications ON WalkRequests.request_id = WalkApplications.request_id
       WHERE WalkApplications.walker_id = Users.user_id AND WalkApplications.status = 'completed') AS completed_walks
-      FROM Users LEFT JOIN WalkRating ON Users.user_id = WalkRatings.walker_id
-      WHERE User.role = 'walker'
+      FROM Users LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
+      WHERE Users.role = 'walker'
       `);
     res.json(rows);
   } catch (err) {

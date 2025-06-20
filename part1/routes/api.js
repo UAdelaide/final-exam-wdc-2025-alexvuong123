@@ -31,7 +31,7 @@ var db = require('../db'); // database
         // insert sample for walkers summary
         await db.execute(`
             INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating)
-            VALUES (SELECT ),
+            VALUES (SELECT request_id FROM WalkRequest WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name=)),
             (2, 3, 4)
             `);
     } catch (err){

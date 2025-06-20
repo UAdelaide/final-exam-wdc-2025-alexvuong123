@@ -4,14 +4,6 @@ require('dotenv').config();
 
 const app = express();
 
-const mysql = require('mysql2');
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'DogWalkService'
-});
-
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));

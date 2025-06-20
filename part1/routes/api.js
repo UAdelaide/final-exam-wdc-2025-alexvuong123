@@ -12,7 +12,8 @@ let db;
             VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username='alice123')),
             ('Bella', 'small', (SELECT user_id FROM Users WHERE username='carol123'))
             `);
-         
+        // insert sample for dogs
+         await db.execute(``)
     } catch (err){
         console.error('Error', err);
     }

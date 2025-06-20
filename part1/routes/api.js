@@ -16,7 +16,9 @@ router.get('/dogs', async(req, res) => {
 });
 
 // /api/walkrequests/open
-router.get('/walkrequest/open', async )
+router.get('/walkrequest/open', async(req, res) => {
+    
+});
 
 // /api/walkers/summary
 

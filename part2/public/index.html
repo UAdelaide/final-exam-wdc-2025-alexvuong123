@@ -21,8 +21,8 @@
         <input v-model="username" type="text" id="username" name="username">
       </div>
       <div class="toLogin">
-        <label for="password">Password</label>
-        <input v-model="password" type="password" id="password" name="password">
+        <label for="password_hash">Password</label>
+        <input v-model="password_hash" type="password" id="password_hash" name="password_hash">
       </div>
       <button type="submit">Log in</button>
     </form>
@@ -35,7 +35,7 @@
         return {
           message: 'Welcome to the Dog Walking Service!',
           username:'',
-          password:''
+          password_hash:''
         };
       },
       methods: {
@@ -43,7 +43,7 @@
           const res = await fetch('/api/users/login', {
             method:'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username: this.username, password: this.password})
+            body: JSON.stringify({ username: this.username, password: this.password_hash})
           })
         const value = await res.json();
         console.log('response: ', value);

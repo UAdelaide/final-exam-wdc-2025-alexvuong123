@@ -32,7 +32,49 @@
             createApp({
                 methods: {
                     async getDogImage(){
+                        const res = await fetch("<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>dOg Walking serVice</title>
+        <!-- for vue -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <style>
+            body{
+                background-color: red;
+                color:yellow;
+            }
+
+            .h1{
+                font-family: cursive;
+                font-size: 0.5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <h3>welcome!!</h3>
+            <h1>click here! ! ! @ ! </h1>
+            <button type="button" @click="getDogImage">click</button>
+            <div v-if="image">
+                <img src="image" alt="">
+            </div>
+        </div>
+        <script>
+            const { createApp, ref } = Vue;
+            createApp({
+                methods: {
+                    async getDogImage(){
                         const res = await fetch("https://dog.ceo/dog-api/documentation/random");
+                        const data = await res.json();
+                        this.dogImage = data.message;
+                    }
+                }
+            }).mount('#app');
+        </script>
+    </body>
+</html>");
                         const data = await res.json();
                         this.dogImage = data.message;
                     }

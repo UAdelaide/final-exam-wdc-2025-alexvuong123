@@ -82,8 +82,10 @@
         const error = ref('');
 
         async function log_out(){
-          const res = await fetch('/api/users/logout',
-            
+          const res = await fetch('/api/users/logout', {
+
+          }
+            method: 'POST'
           )
         }
 

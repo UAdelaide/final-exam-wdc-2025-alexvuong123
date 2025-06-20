@@ -46,9 +46,9 @@
             body: JSON.stringify({ username: this.username, password: this.password})
           })
         const value = await res.json();
-        if(value.role == 'owner'){
+        if(value.user.role == 'owner'){
           window.location.href = 'owner-dashboard.html';
-        } else if (value.role == 'walker'){
+        } else if (value.user.role == 'walker'){
           window.location.href = 'walker-dashboard.html';
         }
         }

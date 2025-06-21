@@ -12,6 +12,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET all dogs
+
+
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {
   const { username, email, password_hash, role } = req.body;

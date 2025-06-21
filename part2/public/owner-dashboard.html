@@ -103,7 +103,7 @@
 
         async function loadDogs() {
           try {
-            const res = await fetch('/api/users/dogs');
+            const res = await fetch('/api/users/dogs/all');
             dogs.value = await res.json();
           } catch (err) {
             error.value = 'Failed to load dog requests';

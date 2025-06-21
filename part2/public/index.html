@@ -76,7 +76,7 @@
         }
       },
       async getDogImages(){
-        const res = await fetch('/api/dogsImages');
+        const res = await fetch('/api/dogs');
         const data = await res.json();
 
         for (let dog of data) {

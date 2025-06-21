@@ -73,7 +73,7 @@
             const walkerId = await getCurrentUser();
             const res = await fetch('/api/walks/${requestId}/apply', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              headers: { 'Content-Type': 'application/json' }
             });
             const result = await res.json();
 

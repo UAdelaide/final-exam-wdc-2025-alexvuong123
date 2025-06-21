@@ -181,6 +181,7 @@ section {
 
 .toLogin {
     text-align: left;
+    display:flex;
     width: 500px;
     margin-bottom: 20px;
     flex-direction: column;

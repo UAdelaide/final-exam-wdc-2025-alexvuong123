@@ -65,7 +65,7 @@
         async function getCurrentUser() {
           const res = await fetch('/api/users/me');
           const value = await res.json();
-          return value.requestId
+          return value.request_id;
         }
 
         async function applyToWalk(requestId) {

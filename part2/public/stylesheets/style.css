@@ -158,6 +158,7 @@ section {
 
 .dog-table {
     text-align: center;
+    margin-top: 20px;
 }
 
 .dog-table tr:nth-child(odd){

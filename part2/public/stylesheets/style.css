@@ -156,6 +156,6 @@ section {
     display: none;
 }
 
-.dog-table {
-    tr:nth-child(even){background-color: #f2f2f2;}
+.dog-table tr:nth-child(even){
+    background-color: #f2f2f2;
 }

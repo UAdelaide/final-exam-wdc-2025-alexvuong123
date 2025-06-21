@@ -26,7 +26,7 @@
       </div>
       <button type="submit">Log in</button>
     </form>
-    <div v-if="dog.length">
+    <div v-if="dogs.length">
     <table class="dog-table">
       <tr>
         <th>Dog ID</th>
@@ -80,7 +80,7 @@
         const data = await res.json();
 
         const imageRes = await fetch("https://dog.ceo/api/breeds/image/random");
-        const imageData = await res.json();
+        const imageData = await imageRes.json();
         this.imageRes = imageData.message;
         return dog;
       }

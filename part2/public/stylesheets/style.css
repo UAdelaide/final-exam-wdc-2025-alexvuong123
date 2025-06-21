@@ -180,8 +180,7 @@ section {
 }
 
 .toLogin {
-    
-    display:flex;
+    text-align: left;
     width: 500px;
     margin-bottom: 20px;
     flex-direction: column;

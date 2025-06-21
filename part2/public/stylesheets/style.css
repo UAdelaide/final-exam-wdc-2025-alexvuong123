@@ -156,8 +156,9 @@ section {
     display: none;
 }
 
-.dog-table th, .dog-table td {
-    border: 1px solid #0000;
+
+.dog-table tr:nth-child(odd){
+
 }
 
 .dog-table tr:nth-child(even){

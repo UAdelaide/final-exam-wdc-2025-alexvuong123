@@ -180,5 +180,7 @@ section {
 }
 
 .toLogin {
-    
+    display: flex;
+    width: 75%;
+    max-width: 95px;
 }

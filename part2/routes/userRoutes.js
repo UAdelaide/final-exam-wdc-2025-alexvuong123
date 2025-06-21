@@ -13,7 +13,14 @@ router.get('/', async (req, res) => {
 });
 
 // GET all dogs
-
+router.get('/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT dog_id, name, email, role FROM Users');
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch users' });
+  }
+});
 
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {

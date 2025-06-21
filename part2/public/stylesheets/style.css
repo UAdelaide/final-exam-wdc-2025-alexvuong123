@@ -6,6 +6,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    text-align:
 }
 
 header {
@@ -70,7 +71,7 @@ footer h4 {
     font-weight: normal;
 }
 
-.post .date 
+.post .date
     float: right;
 }
 

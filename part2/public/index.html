@@ -34,7 +34,7 @@
         <th>Owner ID</th>
         <th>Photo</th>
       </tr>
-      <tr v-for>
+      <tr v-for="dog in dogs" :key="dog.dog_name">
         <td></td>
       </tr>
     </table>

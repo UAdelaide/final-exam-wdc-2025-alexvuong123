@@ -166,5 +166,6 @@ section {
 }
 
 #app {
-    
+    display:flex;
+    align-items: center;
 }

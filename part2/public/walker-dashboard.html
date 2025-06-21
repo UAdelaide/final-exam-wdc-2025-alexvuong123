@@ -70,11 +70,11 @@
 
         async function applyToWalk(requestId) {
           try {
-            const walkerId = await getCurrentUser();
+            const walkerID = await getCurrentUser();
             const res = await fetch('/api/walks/${requestId}/apply', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: walkerId})
+              body: JSON.stringify({ walker_id: walkerID})
             });
             const result = await res.json();
 

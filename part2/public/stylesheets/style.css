@@ -156,6 +156,9 @@ section {
     display: none;
 }
 
+.dog-table {
+    text-align: center;
+}
 
 .dog-table tr:nth-child(odd){
     background-color: white;

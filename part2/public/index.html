@@ -73,6 +73,7 @@
         }
       },
       async getDogImages(){
+        const res = await fetch('/api/dogs')
         const imageRes = await fetch("https://dog.ceo/api/breeds/image/random");
         const imageData = await res.json();
         this.imageRes = imageData.message;

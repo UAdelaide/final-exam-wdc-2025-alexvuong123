@@ -73,9 +73,9 @@
         }
       },
       async getDogImages(){
-        const res = await fetch("https://dog.ceo/api/breeds/image/random");
-        const data = await res.json();
-        this.image = data.message;
+        const imageRes = await fetch("https://dog.ceo/api/breeds/image/random");
+        const imageData = await res.json();
+        this.imageRes = imageData.message;
       }
     }
     }).mount('#app');

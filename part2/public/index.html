@@ -24,9 +24,9 @@
         <label for="password_hash">Password</label>
         <input v-model="password_hash" type="password" id="password_hash" name="password_hash">
       </div>
-      <div>
       <button type="submit">Log in</button>
     </form>
+        <div>
     <table class="dog-table">
       <tr>
         <th>Dog ID</th>
@@ -43,6 +43,7 @@
         <td><img :src="dog.image" alt="image of dog"></td>
       </tr>
     </table>
+  </div>
   </div>
 
   <script>

@@ -182,6 +182,7 @@ section {
 .toLogin {
     width: 500px;
     margin-bottom: 15px;
+    flex-direction: column;
 }
 
 h1 {

@@ -192,4 +192,6 @@ h1 {
     border-radius: 4px;
 }
 
-#login_form 
+#login_form button {
+    margin-top: 15px;
+}

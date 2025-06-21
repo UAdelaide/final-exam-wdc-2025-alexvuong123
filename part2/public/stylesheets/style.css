@@ -164,6 +164,7 @@ section {
     text-align: center;
     margin-top: 30px;
     width:100%;
+    table-layout: auto;
 }
 
 .dog-table tr:nth-child(odd){

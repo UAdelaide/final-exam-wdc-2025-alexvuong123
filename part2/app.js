@@ -1,9 +1,16 @@
 const express = require('express');
-var session = require('express-session'); 
+var session = require('express-session');
 const path = require('path');
 require('dotenv').config();
 
 const app = express();
+
+app.use(session({
+secret: ‘a’,
+resave: false,
+saveUninitialized: true,
+cookie: { secure: false }
+}));
 
 // Middleware
 app.use(express.json());

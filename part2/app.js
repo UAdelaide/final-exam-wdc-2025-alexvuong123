@@ -5,8 +5,10 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cookieParser());
+
 app.use(session({
-    secret: ‘a’,
+    secret: 'a',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }

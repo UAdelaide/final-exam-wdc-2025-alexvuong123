@@ -79,7 +79,7 @@ req.session.destroy((err) => {
 });
 
 // /api/dogs
-app.get('/api/users/dogs', async (req, res) => {
+router.get('/api/users/dogs', async (req, res) => {
   try {
     const [rows] = await db.execute(`SELECT Dogs.dog_id, Dogs.name AS dog_name, Dogs.size, Users.username
       AS owner_username
